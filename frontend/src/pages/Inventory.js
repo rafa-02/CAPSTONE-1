@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import AddProduct from "../components/AddProduct";
 import UpdateProduct from "../components/UpdateProduct";
 import AuthContext from "../AuthContext";
+import { Link } from "react-router-dom";
 
 function Inventory() {
   const [showProductModal, setShowProductModal] = useState(false);

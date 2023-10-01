@@ -27,7 +27,7 @@ function SideMenu() {
                     alt="inventory-icon"
                     src={require("../assets/inventory-icon.png")}
                   />
-                  <span className="text-sm font-medium"> Inventory </span>
+                  <span className="text-sm font-medium"> Student </span>
                 </div>
               </Link>
             </summary>
@@ -41,14 +41,15 @@ function SideMenu() {
               alt="purchase-icon"
               src={require("../assets/supplier-icon.png")}
             />
-            <span className="text-sm font-medium"> Purchase Details</span>
+            <span className="text-sm font-medium"> Attendance</span>
           </Link>
+
           <Link
             to="/sales"
             className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
           >
             <img alt="sale-icon" src={require("../assets/supplier-icon.png")} />
-            <span className="text-sm font-medium"> Sales</span>
+            <span className="text-sm font-medium"> Report</span>
           </Link>
 
           <details className="group [&_summary::-webkit-details-marker]:hidden">
@@ -59,7 +60,7 @@ function SideMenu() {
                     alt="store-icon"
                     src={require("../assets/order-icon.png")}
                   />
-                  <span className="text-sm font-medium"> Manage Store </span>
+                  <span className="text-sm font-medium"> Settings </span>
                 </div>
               </Link>
             </summary>

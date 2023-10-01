@@ -67,17 +67,18 @@ function Login() {
       <div className="grid grid-cols-1 sm:grid-cols-2 h-screen  items-center place-items-center">
       <div className="flex justify-center">
       <img
-    src={require("../assets/signup.jpg")}
+    src={require("../assets/logo.png")}
     alt=""
-    style={{ height: "600px", width: "auto" ,filter: "blur(1.9px)",opacity: "0.9"}}
+    style={{ height: "200px", width: "auto"}}
        />
           </div>
         <div className="w-full max-w-md space-y-8 p-10 rounded-lg">
           <div>
             <img
               className="mx-auto h-1300 w-auto"
-              src={require("../assets/logo.png")}
+              src={require("../assets/citelogo.jpg")}
               alt="Logo"
+              style={{height: "150px", width: "auto"}}
             />
           </div>
           <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
