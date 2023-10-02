@@ -21,7 +21,7 @@ function Adminsidemenu() {
 
           <details className="group [&_summary::-webkit-details-marker]:hidden">
             <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-              <Link to="">
+              <Link to="/teacher-mngt">
                 <div className="flex items-center gap-2">
                   {/* <img
                     alt="inventory-icon"

@@ -169,7 +169,7 @@ function Dashboard() {
 
         <article className="flex flex-col gap-4 rounded-lg border  border-gray-100 bg-white p-6">
           <div>
-          <Link to="">
+          <Link to="/inventory">
                 {/* <div className="flex items-center gap-2">
                   <img
                     alt="inventory-icon"

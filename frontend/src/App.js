@@ -16,7 +16,6 @@ import Sales from "./pages/Sales";
 import PurchaseDetails from "./pages/PurchaseDetails";
 import Subjects from "./pages/Subjects";
 import Admindashboard from "./pages/Admindashboard";
-import MainOutlet from "./components/MainOutlet";
 
 const App = () => {
   const [user, setUser] = useState("");
@@ -68,16 +67,17 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route
-            // path="/"
+            path="/"
             element={
               <ProtectedWrapper>
-                <MainOutlet />
+                <Layout />
               </ProtectedWrapper>
             }
           >
-            
+          
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/admindashboard" element={<Admindashboard />}/>
+            <Route path="/adminlayout" element={<AdminLayout />}/>
             <Route path="/inventory" element={<Inventory />} />
             <Route path="/purchase-details" element={<PurchaseDetails />} />
             <Route path="/sales" element={<Sales />} />
