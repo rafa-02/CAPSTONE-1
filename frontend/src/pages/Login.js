@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import AuthContext from "../AuthContext";
+import AdminLayout from "../components/AdminLayout";
 
 function Login() {
   const [form, setForm] = useState({
@@ -24,7 +25,11 @@ function Login() {
           alert("Successfully Login");
           localStorage.setItem("user", JSON.stringify(data));
           authContext.signin(data._id, () => {
-            navigate("/");
+            navigate("/dashboard");
+            
+            if (form.email==="admin@gmail.com" && form.password==="admin123"){
+              navigate("/admindashboard");
+          }
           });
         })
         .catch((err) => {
@@ -36,9 +41,10 @@ function Login() {
 
   const loginUser = (e) => {
     // Cannot send empty data
-    if (form.email === "" || form.password === "") {
+    if (form.email === "" && form.password === "") {
       alert("To login user, enter details to proceed...");
-    } else {
+    } 
+    else {
       fetch("http://localhost:4000/api/login", {
         method: "POST",
         headers: {

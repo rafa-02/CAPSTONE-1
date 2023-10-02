@@ -3,8 +3,9 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import "./index.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import Layout from "./components/Layout";
+import AdminLayout from "./components/AdminLayout";
 import Inventory from "./pages/Inventory";
 import NoPageFound from "./pages/NoPageFound";
 import AuthContext from "./AuthContext";
@@ -14,6 +15,8 @@ import Store from "./pages/Store";
 import Sales from "./pages/Sales";
 import PurchaseDetails from "./pages/PurchaseDetails";
 import Subjects from "./pages/Subjects";
+import Admindashboard from "./pages/Admindashboard";
+import MainOutlet from "./components/MainOutlet";
 
 const App = () => {
   const [user, setUser] = useState("");
@@ -65,14 +68,16 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route
-            path="/"
+            // path="/"
             element={
               <ProtectedWrapper>
-                <Layout />
+                <MainOutlet />
               </ProtectedWrapper>
             }
           >
-            <Route index element={<Dashboard />} />
+            
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/admindashboard" element={<Admindashboard />}/>
             <Route path="/inventory" element={<Inventory />} />
             <Route path="/purchase-details" element={<PurchaseDetails />} />
             <Route path="/sales" element={<Sales />} />
