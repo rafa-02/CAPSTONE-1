@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Adminsidemenu() {
+function AdminSideMenu() {
   const localStorageData = JSON.parse(localStorage.getItem("user"));
 
   return (
@@ -21,50 +21,67 @@ function Adminsidemenu() {
 
           <details className="group [&_summary::-webkit-details-marker]:hidden">
             <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-              <Link to="/teacher-mngt">
+              <Link to="/teacher">
                 <div className="flex items-center gap-2">
-                  {/* <img
+                  <img
                     alt="inventory-icon"
-                    src={require("../assets/inventory-icon.png")}
-                  /> */}
-                  <span className="text-sm font-medium"> Teacher Management </span>
+                    src={require("../assets/supplier-icon.png")}
+                  />
+                  <span className="text-sm font-medium"> Teacher </span>
                 </div>
               </Link>
             </summary>
           </details>
 
-          <Link to=""
+          {/* <Link
+            to="/student"
             className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
           >
-            {/* <img
+            <img
               alt="purchase-icon"
               src={require("../assets/supplier-icon.png")}
-            /> */}
-            <span className="text-sm font-medium"> User Account</span>
-          </Link>
+            />
+            <span className="text-sm font-medium"> Student </span>
+          </Link> */}
 
-          <Link to=""
+          <Link
+            to="/user-account"
             className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
           >
-            {/* <img alt="sale-icon" src={require("../assets/supplier-icon.png")} /> */}
-            <span className="text-sm font-medium"> User Logs</span>
+            <img
+              alt="purchase-icon"
+              src={require("../assets/supplier-icon.png")}
+            />
+            <span className="text-sm font-medium"> User Account </span>
           </Link>
 
-          <Link to=""
+          <Link
+            to="/logs"
             className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
           >
-            {/* <img alt="sale-icon" src={require("../assets/supplier-icon.png")} /> */}
+            <img
+              alt="purchase-icon"
+              src={require("../assets/supplier-icon.png")}
+            />
+            <span className="text-sm font-medium"> User Logs </span>
+          </Link>
+
+          <Link
+            to="/report"
+            className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+          >
+            <img alt="sale-icon" src={require("../assets/supplier-icon.png")} />
             <span className="text-sm font-medium"> Report</span>
           </Link>
 
           <details className="group [&_summary::-webkit-details-marker]:hidden">
             <summary className="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-              <Link to="">
+              <Link to="/manage-store">
                 <div className="flex items-center gap-2">
-                  {/* <img
+                  <img
                     alt="store-icon"
                     src={require("../assets/order-icon.png")}
-                  /> */}
+                  />
                   <span className="text-sm font-medium"> Settings </span>
                 </div>
               </Link>
@@ -96,4 +113,4 @@ function Adminsidemenu() {
   );
 }
 
-export default Adminsidemenu;
+export default AdminSideMenu;
