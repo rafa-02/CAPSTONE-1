@@ -3,24 +3,20 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import "./index.css";
-import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
-import Layout from "./components/Layout";
-import Inventory from "./pages/Student";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NoPageFound from "./pages/NoPageFound";
 import AuthContext from "./AuthContext";
 import ProtectedWrapper from "./ProtectedWrapper";
 import { useEffect, useState } from "react";
-import Store from "./pages/Store";
-import Sales from "./pages/Sales";
-import PurchaseDetails from "./pages/PurchaseDetails";
 import AdminLayout from "./components/AdminLayout";
-import AdminDashboard from "./pages/AdminDashboard";
 import Student from "./pages/Student";
 import Teacher from "./pages/Teacher";
 import Subjects from "./pages/Subjects";
 import UserAccount from "./pages/UserAccount";
 import Logs from "./components/Logs";
 import Report from "./pages/Report";
+import Admindashboard from "./pages/Admindashboard";
+import Settings from "./pages/Settings";
 
 const App = () => {
   const [user, setUser] = useState("");
@@ -80,7 +76,7 @@ const App = () => {
             }
           >
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/admindashboard" element={<AdminDashboard />} />
+            <Route path="/admindashboard" element={<Admindashboard />} />
             <Route path="/adminlayout" element={<AdminLayout />} />
 
             <Route path="/teacher" element={<Teacher />} />
@@ -90,9 +86,9 @@ const App = () => {
 
             <Route path="/logs" element={<Logs />} />
 
-            <Route path="/purchase-details" element={<PurchaseDetails />} />
             <Route path="/report" element={<Report />} />
-            <Route path="/manage-store" element={<Store />} />
+            <Route path="/setting" element={<Settings />} />
+
           </Route>
           <Route path="*" element={<NoPageFound />} />
         </Routes>

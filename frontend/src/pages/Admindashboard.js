@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 
-function AdminDashboard() {
+function Admindashboard() {
 
 
 
@@ -70,7 +70,7 @@ function AdminDashboard() {
                          <button type="button" name="button" id="sec">Subject</button>
               </Link>
 
-                    </div>
+          </div>
         </article>
       </div>
       
@@ -132,4 +132,4 @@ function AdminDashboard() {
   );
 }
 
-export default AdminDashboard;
+export default Admindashboard;

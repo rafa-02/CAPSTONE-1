@@ -1,8 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Header";
-// import SideMenu from "./SideMenu";
-import AdminSideMenu from "./AdminSideMenu";
+import Adminsidemenu from "./Adminsidemenu";
 
 function AdminLayout() {
   return (
@@ -12,7 +11,7 @@ function AdminLayout() {
       </div>
       <div className="grid grid-cols-12 bg-gray-100 items-baseline">
         <div className="col-span-2 h-screen sticky top-0 hidden lg:flex">
-          <AdminSideMenu />
+          <Adminsidemenu />
         </div>
         <Outlet />
       </div>
