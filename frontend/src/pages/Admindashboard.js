@@ -33,7 +33,7 @@ import { Link } from "react-router-dom";
 //   ],
 // };
 
-function Dashboard() {
+function Admindashboard() {
   // const [stores, setStores] = useState([]);
   // const [products, setProducts] = useState([]);
 
@@ -169,7 +169,7 @@ function Dashboard() {
 
         <article className="flex flex-col gap-4 rounded-lg border  border-gray-100 bg-white p-6">
           <div>
-          <Link to="/inventory">
+          <Link to="">
                 {/* <div className="flex items-center gap-2">
                   <img
                     alt="inventory-icon"
@@ -177,7 +177,7 @@ function Dashboard() {
                   />
                   <span className="text-sm font-medium"> Student </span>
                 </div> */}   
-                         <button type="button" name="button" id="sec">Subject</button>
+                         <button type="button" name="button" id="sec">user logs</button>
               </Link>
 
           </div>
@@ -242,4 +242,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Admindashboard;
