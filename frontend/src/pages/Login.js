@@ -24,7 +24,7 @@ function Login() {
           alert("Successfully Login");
           localStorage.setItem("user", JSON.stringify(data));
           authContext.signin(data._id, () => {
-            navigate("/");
+            navigate("/admindashboard");
           });
         })
         .catch((err) => {

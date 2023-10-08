@@ -5,7 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
-import Inventory from "./pages/Inventory";
+import Inventory from "./pages/Student";
 import NoPageFound from "./pages/NoPageFound";
 import AuthContext from "./AuthContext";
 import ProtectedWrapper from "./ProtectedWrapper";
@@ -13,7 +13,14 @@ import { useEffect, useState } from "react";
 import Store from "./pages/Store";
 import Sales from "./pages/Sales";
 import PurchaseDetails from "./pages/PurchaseDetails";
+import AdminLayout from "./components/AdminLayout";
+import AdminDashboard from "./pages/AdminDashboard";
+import Student from "./pages/Student";
+import Teacher from "./pages/Teacher";
 import Subjects from "./pages/Subjects";
+import UserAccount from "./pages/UserAccount";
+import Logs from "./components/Logs";
+import Report from "./pages/Report";
 
 const App = () => {
   const [user, setUser] = useState("");
@@ -68,16 +75,24 @@ const App = () => {
             path="/"
             element={
               <ProtectedWrapper>
-                <Layout />
+                <AdminLayout />
               </ProtectedWrapper>
             }
           >
-            <Route index element={<Dashboard />} />
-            <Route path="/inventory" element={<Inventory />} />
-            <Route path="/purchase-details" element={<PurchaseDetails />} />
-            <Route path="/sales" element={<Sales />} />
-            <Route path="/manage-store" element={<Store />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/admindashboard" element={<AdminDashboard />} />
+            <Route path="/adminlayout" element={<AdminLayout />} />
+
+            <Route path="/teacher" element={<Teacher />} />
+            <Route path="/user-account" element={<UserAccount />} />
             <Route path="/subjects" element={<Subjects />} />
+            <Route path="/student" element={<Student />} />
+
+            <Route path="/logs" element={<Logs />} />
+
+            <Route path="/purchase-details" element={<PurchaseDetails />} />
+            <Route path="/report" element={<Report />} />
+            <Route path="/manage-store" element={<Store />} />
           </Route>
           <Route path="*" element={<NoPageFound />} />
         </Routes>
